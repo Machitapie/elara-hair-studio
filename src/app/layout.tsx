@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Elara Hair Studio — Premium Hair Salon",
+  title: "Elara Hair Studio | Oslo",
   description:
-    "Experience the art of beautiful hair at Elara Hair Studio. Expert stylists, luxurious treatments, and a warm atmosphere await you.",
+    "Oslos mest eksklusive hårstudio. Premium hårbehandlinger, farging og styling i hjertet av Frogner.",
 };
 
 export default function RootLayout({
@@ -14,7 +14,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="h-full antialiased">
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full">{children}</body>
     </html>
   );
 }

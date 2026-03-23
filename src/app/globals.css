@@ -1,15 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap');
 @import "tailwindcss";
 
 @theme inline {
-  --color-cream: #FAF7F2;
-  --color-beige: #F0E6D6;
-  --color-warm: #D4C5B0;
-  --color-charcoal: #2C2C2C;
-  --color-charcoal-light: #4A4A4A;
-  --color-gold: #B8956A;
-  --color-gold-light: #D4B896;
-  --font-heading: 'Playfair Display', serif;
+  --color-dark: #0C0A09;
+  --color-dark-card: #1A1714;
+  --color-dark-elevated: #231F1B;
+  --color-gold: #C9A96E;
+  --color-gold-light: #E2CA98;
+  --color-gold-muted: rgba(201, 169, 110, 0.15);
+  --color-cream: #F5F0E8;
+  --color-cream-soft: #E8E0D4;
+  --color-text-primary: #F5F0E8;
+  --color-text-secondary: #A09484;
+  --color-text-muted: #6B5E50;
+  --color-border: rgba(201, 169, 110, 0.12);
+  --font-heading: 'Cormorant Garamond', serif;
   --font-body: 'Inter', sans-serif;
 }
 
@@ -18,7 +23,32 @@ html {
 }
 
 body {
-  background: var(--color-cream);
-  color: var(--color-charcoal);
+  background: var(--color-dark);
+  color: var(--color-text-primary);
   font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: var(--color-gold);
+  color: var(--color-dark);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-dark);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-gold);
+  border-radius: 3px;
+}
+
+/* Smooth image loading */
+img {
+  opacity: 1;
+  transition: opacity 0.4s ease;
 }
